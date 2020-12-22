@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -127,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "my-state-ngxs"
+  "defaultProject": "my-state-ngxs",
+  "cli": {
+    "analytics": "30133190-934a-4c54-8a80-aeef138ef207"
+  }
 }
