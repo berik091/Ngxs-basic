@@ -1,0 +1,20 @@
+<div class="col">
+    <div *ngIf="users">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of users | async">
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
