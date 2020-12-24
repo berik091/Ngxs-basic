@@ -8,16 +8,21 @@ import { NgxsModule } from '@ngxs/store';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { ListComponent } from './components/list/list/list.component';
-
+import { UserState } from './states/user.state';
+import { HttpClientModule }   from '@angular/common/http';
+import { FormComponent } from './components/form/form.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent
+    ListComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgxsModule.forRoot([
+      UserState
     ]),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),

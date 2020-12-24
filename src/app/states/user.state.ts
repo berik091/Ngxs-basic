@@ -4,6 +4,7 @@ import { AddUser, GetUsers} from "../actions/user.action";
 import { User } from "../models/User";
 import { UserService } from "../services/user.service";
 import {tap} from 'rxjs/operators';
+import { Injectable } from "@angular/core";
 
 export class UserStateModel{
     users: User[];  
@@ -16,6 +17,7 @@ export class UserStateModel{
     }
 })
 
+@Injectable()
 export class UserState{
     constructor(private userService: UserService){
     }
